@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>WhatsApp-Wrapped</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    
+    <div class="slideshow-container">
+        
+        <div class="main page" id="slide-0">
+            <h3>Group Chat Wrapped</h3>
+            <h1>This month, there were</h1>
+            <div class="stats-row" style="margin-top: 40px;">
+                <div class="design position" style="padding: 40px;">
+                    <h3>Total Messages</h3>
+                    <div class="big-stat" id="total-messages">...</div>
+                </div>
+                <div class="design position" style="padding: 40px;">
+                    <h3>Total Words</h3>
+                    <div class="big-stat" id="total-words">...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-1">
+            <h2>🏆 Group Chat Awards 🏆</h2>
+            <div class="awards-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; max-width: 1000px; margin: 30px auto 0;">
+                <div class="design" style="padding: 40px 20px;">
+                    <h3>🦉 Night Owl 🦉</h3>
+                    <h1 id="nightowl" style="color: #1DB954; margin-top: 15px;">...</h1>
+                </div>
+                <div class="design" style="padding: 40px 20px;">
+                    <h3>👻 The Ghost 👻</h3>
+                    <h1 id="ghost" style="color: #1DB954; margin-top: 15px;">...</h1>
+                </div>
+                <div class="design" style="padding: 40px 20px;">
+                    <h3>🔥 Hype Person 🔥</h3>
+                    <h1 id="hype" style="color: #1DB954; margin-top: 15px;">...</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-2">
+            <h2>The Monthly Timings</h2>
+            <h3>The group was exploding on</h3>
+            <div class="big-stat" id="busiest-day-date" style="font-size: 100px;">...</div>
+            <h1>Sending <span id="busiest-day-count" style="color: #1DB954;">...</span> messages in one day!</h1>
+        </div>
+
+        <div class="slide" id="slide-3">
+            <h2>When is the chat most active?</h2>
+            <div class="chart-wrapper">
+                <canvas id="activeHoursChart"></canvas>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-4">
+            <h2>Who breaks the ice?</h2>
+            <div class="chart-wrapper">
+                <canvas id="startersChart"></canvas>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-5">
+            <h2>The Group's Favourites</h2>
+            <h3>Most Used Emojis</h3>
+            <div class="emoji-grid" id="global-emojis">
+                </div>
+        </div>
+
+        <div class="slide" id="slide-6">
+            <h2>PinDrop Silence</h2>
+            <h3 style="margin-bottom: 20px;">Longest Gap: <span id="silence-text" style="color:#ffffff;">...</span></h3>
+            <div class="chart-wrapper">
+                <canvas id="silenceChart"></canvas>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-7">
+            <h2>Who leaves you on read(=ragebaiter)?</h2>
+            <h3>Average Response Time (Minutes)</h3>
+            <div class="chart-wrapper">
+                <canvas id="responseTimeChart"></canvas>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-8">
+            <div id="profile-selector-view" class="center-content">
+                <h2>🔍Look Closely🔎</h2>
+                <h3 style="margin-bottom: 30px;">Select a person to view their full profile</h3>
+                <div id="name-grid" class="name-grid-layout">
+                    </div>
+            </div>
+
+            <div id="single-profile-view" class="hidden-view">
+                <button class="back-btn" id="back-to-grid">Back to Names</button>
+                <div class="profile-header">
+                    <h1 id="ind-name" class="profile-name">...</h1>
+                    <h3>Individual Stats</h3>
+                </div>
+                <div class="profile-content">
+                    <div class="stats-row">
+                        <div class="design position">
+                            <h3>Messages</h3>
+                            <div class="ind-val" id="ind-msg">-</div>
+                        </div>
+                        <div class="design position">
+                            <h3>Words</h3>
+                            <div class="ind-val" id="ind-words">-</div>
+                        </div>
+                        <div class="design position">
+                            <h3>Avg Response</h3>
+                            <div class="ind-val" id="ind-resp">-</div>
+                        </div>
+                    </div>
+                    <h3 style="margin-top: 20px;">Activity Heatmap</h3>
+                    <div class="chart-wrapper" style="height: 250px; margin-bottom: 20px;">
+                        <canvas id="profileTimeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls" id="main-controls">
+            <button id="prev-btn" onclick="changeSlide(-1)"> Back</button>
+            <div class="page-indicator" id="page-text">1 / 9</div>
+            <button id="next-btn" onclick="changeSlide(1)">Next </button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
