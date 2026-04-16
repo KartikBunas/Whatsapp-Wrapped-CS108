@@ -1,120 +1,120 @@
 {
   "group_stats": {
-    "busiest_day": "21/04/26",
-    "busiest_day_count": 104,
-    "longest_silence_hours": 3.05,
-    "longest_silence_from": "18/04/26, 04:06",
-    "longest_silence_to": "18/04/26, 07:09",
-    "night_owl": "Person3",
-    "ghost": "Person3",
-    "conversation_starter": "Person4",
-    "hype_person": "Person1"
+    "busiest_day": "11/04/26",
+    "busiest_day_count": 122,
+    "longest_silence_hours": 3.6,
+    "longest_silence_from": "11/04/26, 04:55",
+    "longest_silence_to": "11/04/26, 08:31",
+    "night_owl": "Aman",
+    "ghost": "Aman",
+    "conversation_starter": "Kaushik",
+    "hype_person": "Gururatna"
   },
   "per_person": {
-    "Person1": {
-      "total_messages": 907,
-      "total_words": 4498,
+    "Gururatna": {
+      "total_messages": 343,
+      "total_words": 2774,
       "night_owl_messages": 0,
-      "reply_count": 415,
-      "conversation_starts": 26,
+      "reply_count": 245,
+      "conversation_starts": 5,
       "top_emojis": [
+        "\ud83d\ude2d\ud83d\udc80",
         "\ud83d\ude02",
+        "\ud83d\ude02\ud83d\ude02"
+      ],
+      "avg_response_time": 9.0,
+      "hype_score": 7.0,
+      "max_consecutive_streak": 4
+    },
+    "Dhruv": {
+      "total_messages": 1002,
+      "total_words": 4885,
+      "night_owl_messages": 0,
+      "reply_count": 465,
+      "conversation_starts": 17,
+      "top_emojis": [
+        "\ud83e\udd72",
+        "\ud83e\udd23",
+        "\ud83d\ude2d"
+      ],
+      "avg_response_time": 8.0,
+      "hype_score": 8.0,
+      "max_consecutive_streak": 10
+    },
+    "Shashank": {
+      "total_messages": 63,
+      "total_words": 504,
+      "night_owl_messages": 0,
+      "reply_count": 51,
+      "conversation_starts": 0,
+      "top_emojis": [
         "\ud83e\udd40",
+        "\ud83d\ude22",
         "\ud83e\udd7a"
       ],
-      "avg_response_time": 9.0,
-      "hype_score": 8.0,
-      "max_consecutive_streak": 9
-    },
-    "Person7": {
-      "total_messages": 265,
-      "total_words": 2124,
-      "night_owl_messages": 0,
-      "reply_count": 202,
-      "conversation_starts": 9,
-      "top_emojis": [
-        "\ud83e\udd23",
-        "\ud83d\ude02\ud83d\ude02",
-        "\ud83e\udd72"
-      ],
-      "avg_response_time": 7.0,
-      "hype_score": 8.0,
-      "max_consecutive_streak": 3
-    },
-    "Person2": {
-      "total_messages": 56,
-      "total_words": 461,
-      "night_owl_messages": 0,
-      "reply_count": 47,
-      "conversation_starts": 1,
-      "top_emojis": [
-        "\ud83d\ude22",
-        "\ud83e\udd21",
-        "\ud83e\udd23"
-      ],
-      "avg_response_time": 9.0,
-      "hype_score": 12.5,
+      "avg_response_time": 8.0,
+      "hype_score": 11.0,
       "max_consecutive_streak": 2
     },
-    "Person4": {
-      "total_messages": 283,
-      "total_words": 2911,
+    "Sathvik": {
+      "total_messages": 228,
+      "total_words": 446,
       "night_owl_messages": 0,
-      "reply_count": 124,
-      "conversation_starts": 29,
+      "reply_count": 180,
+      "conversation_starts": 3,
       "top_emojis": [
-        "\ud83e\udd21",
-        "\ud83d\ude02\ud83d\ude02",
-        "\ud83d\ude2d"
-      ],
-      "avg_response_time": 10.0,
-      "hype_score": 10.0,
-      "max_consecutive_streak": 11
-    },
-    "Person6": {
-      "total_messages": 209,
-      "total_words": 5039,
-      "night_owl_messages": 0,
-      "reply_count": 152,
-      "conversation_starts": 4,
-      "top_emojis": [
-        "\ud83e\udd21",
+        "\ud83d\ude2d",
         "\ud83e\udd40",
-        "\ud83e\udd7a"
+        "\ud83d\ude02"
       ],
-      "avg_response_time": 10.0,
-      "hype_score": 8.0,
+      "avg_response_time": 7.0,
+      "hype_score": 9.0,
       "max_consecutive_streak": 3
     },
-    "Person5": {
-      "total_messages": 216,
-      "total_words": 442,
+    "Kaushik": {
+      "total_messages": 259,
+      "total_words": 2592,
       "night_owl_messages": 0,
-      "reply_count": 174,
-      "conversation_starts": 1,
+      "reply_count": 141,
+      "conversation_starts": 31,
+      "top_emojis": [
+        "\ud83e\udd40",
+        "\ud83d\ude02",
+        "\ud83e\udd21"
+      ],
+      "avg_response_time": 8.0,
+      "hype_score": 8.5,
+      "max_consecutive_streak": 7
+    },
+    "Parth": {
+      "total_messages": 195,
+      "total_words": 4777,
+      "night_owl_messages": 0,
+      "reply_count": 145,
+      "conversation_starts": 2,
+      "top_emojis": [
+        "\ud83e\udd7a",
+        "\ud83e\udd40",
+        "\ud83e\udd21"
+      ],
+      "avg_response_time": 10.0,
+      "hype_score": 7.0,
+      "max_consecutive_streak": 3
+    },
+    "Aman": {
+      "total_messages": 609,
+      "total_words": 4211,
+      "night_owl_messages": 479,
+      "reply_count": 0,
+      "conversation_starts": 9,
       "top_emojis": [
         "\ud83d\ude22",
-        "\ud83e\udd21",
-        "\ud83d\ude2d\ud83d\udc80"
-      ],
-      "avg_response_time": 9.0,
-      "hype_score": 10.0,
-      "max_consecutive_streak": 3
-    },
-    "Person3": {
-      "total_messages": 534,
-      "total_words": 3806,
-      "night_owl_messages": 416,
-      "reply_count": 0,
-      "conversation_starts": 13,
-      "top_emojis": [
-        "\ud83e\udd21",
-        "\ud83e\udd7a",
-        "\ud83d\ude2d"
+        "\ud83e\udd72",
+        "\ud83e\udd21"
       ],
       "avg_response_time": null,
-      "hype_score": 18.0,
-      "max_consecutive_streak": 27
+      "hype_score": 10.0,
+      "max_consecutive_streak": 32
     }
   }
 }

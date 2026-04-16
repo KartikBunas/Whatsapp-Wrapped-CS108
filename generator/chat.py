@@ -30,43 +30,43 @@ def generate_chat(vocab):
 
     #group members' description
     members = {
-            "Person1": {
+            "Dhruv": {
                 "attribute": "The Chatterbox",
                 "weight": 0.40,          
                 "hours": np.arange(8, 24), 
                 "length": 5,      
         },
-            "Person2": {
+            "Shashank": {
                 "attribute": "The Quiet Kid",
                 "weight": 0.04,          
                 "hours": np.arange(9, 21), 
                 "length": 8,      
         },
-            "Person3": {
+            "Aman": {
                 "attribute": "The Night Owl",
                 "weight": 0.1,          
                 "hours": np.arange(0, 5), 
                 "length": 7,      
         },
-            "Person4": {
+            "Kaushik": {
                 "attribute": "The Day Boarder",
                 "weight": 0.1,          
                 "hours": np.arange(7, 20), 
                 "length": 10,      
         },
-            "Person5": {
+            "Sathvik": {
                 "attribute": "The One Liner",
                 "weight": 0.12,          
                 "hours": np.arange(10, 24), 
                 "length": 2,      
         },
-            "Person6": {
+            "Parth": {
                 "attribute": "The Long Writer",
                 "weight": 0.1,          
                 "hours": np.arange(9, 23), 
                 "length": 25,      
         },
-            "Person7": {
+            "Gururatna": {
                 "attribute": "The Normal Guy",
                 "weight": 0.14,          
                 "hours": np.arange(9, 24), 

@@ -47,7 +47,7 @@ print(f"Total messages loaded: {len(messages)}")
 print("First message:", messages[0])
 print("Last message:", messages[-1])
  
- # total messages - no of messages each person sent 
+ # total  messages - no of messages each person sent 
 total_messages = {}
 
 for m in messages:
