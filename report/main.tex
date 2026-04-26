@@ -1,0 +1,54 @@
+\documentclass{report}
+
+\title{Whatsapp-Wrapped-CS108-Report}
+\author{Kartik Bunas \& Vishal Gill}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Division Of Work}
+Kartik's Part:
+\begin{itemize}
+    \item Chat Generator
+    \item HTML
+    \item CSS
+\end{itemize}
+Vishal's Part:
+\begin{itemize}
+    \item Chat Analyzer
+    \item JavaScript
+\end{itemize}
+
+\chapter{By Kartik}
+
+\section{Libraries Used}
+
+\subsection{Chat Generator}
+\begin{description}
+  \item[datetime] Used to describe the start and end times, time increment, and format the time string.
+  \item[numpy] Used to randomize the sender, the gaps between messages, and the message wording.
+  \item[pathlib] Used to choose the location to save chat.txt file generated.
+  \item[sys] Used to read command line arguments.
+\end{description}
+
+\section{Features Implemented}
+Our Wrapped Project allows us to generate and analyze chat messages. We can view this as a slideshow in which there are some custom awards, charts, etc. for the whole group and at the end we have the option to analyze each member's activity.
+
+\section{Hurdles Faced}
+\subsection{Chat Generator}
+\begin{itemize}
+    \item I didn't get how do I save the generated text into chat.txt which was not in the same folder as the generator . This is where pathlib came in handy. I looked it up on \cite{pythondocs}.
+    \item I didn't know what all numpy distributions I had to use for the randomness in time manipulation and forming messages. I looked this up online too.
+\end{itemize}
+\subsection{HTML \& CSS}
+There wasn't any explicit major issues. There were some concepts I didn't know about flexbox, transitions, padding/margins, etc . I used \cite{gemini} and \cite{w3schools} for this and also for looking up the colours used in spotify.The browser also refreshed on each slide so I looked up the solution for it which was hidden view.
+\subsection{LaTeX}
+Used \cite{gemini} to make references file and for help in pdf compiling using makefile.
+
+\chapter{By Vishal}
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
