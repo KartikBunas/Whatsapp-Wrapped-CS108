@@ -1,0 +1,201 @@
+/* Base */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #121212; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container */
+.slideshow-container {
+    background-color: #1e1e1e;
+    width: 95vw;             
+    max-width: 1400px;       
+    height: 90vh;            
+    min-height: 700px;       
+    border-radius: 24px;
+    box-shadow: 0 20px 60px black; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 60px;           
+    text-align: center;
+}
+
+/* Individual slide visibility */
+[id^="slide-"] {
+    flex-grow: 1;
+    display: none; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;
+}
+
+/* Text */
+h1 { font-size: 42px; margin-bottom: 10px; font-weight: 800; }
+h2 { font-size: 36px; margin-bottom: 20px; color: limegreen; }
+h3 { font-size: 16px; text-transform: uppercase; letter-spacing: 3px; color: silver; margin-bottom: 10px; } 
+
+.big-stat { font-size: 80px; font-weight: 900; color: limegreen; margin: 10px 0; }
+.ind-val { font-size: 32px; font-weight: 800; color: white; }
+
+/* Layouts */
+.stats-row { 
+    display: flex; 
+    gap: 20px; 
+    margin-bottom: 20px; 
+    width: 100%; 
+    justify-content: center; 
+}
+
+.position { 
+    flex: 1; 
+    max-width: 300px; 
+}
+
+.design { 
+    background: darkslategray; 
+    border-radius: 16px; 
+    text-align: center; 
+    border: 1px solid dimgray; 
+    transition: all 0.3s ease;
+}
+
+.design:hover {
+    background: dimgray;
+    transform: translateY(-5px);
+    border-color: gray;
+}
+
+/* Charts */
+.chart-wrapper { 
+    width: 90%; 
+    height: 400px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+/* Emojis */
+.emoji-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    background: darkslategray;
+    padding: 40px;
+    border-radius: 16px;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+.emoji-box {
+    font-size: 64px;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+.emoji-box:hover { 
+    transform: scale(1.2); 
+}
+
+/* Profile view */
+.center-content { width: 100%; text-align: center; }
+.hidden-view { display: none; }
+
+.name-grid-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.name-btn {
+    background: darkslategray;
+    color: white;
+    border: 1px solid dimgray;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.name-btn:hover {
+    background: limegreen;
+    color: black;
+    transform: scale(1.05);
+}
+
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: transparent;
+    color: silver;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.back-btn:hover { color: white; }
+
+.profile-header { margin-bottom: 10px; text-align: center; }
+.profile-name { color: limegreen; font-size: 50px; margin-bottom: 5px; }
+
+.profile-content { 
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    align-items: center; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+/* Navigation */
+.controls { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px; 
+    width: 100%; 
+}
+
+.controls button { 
+    background-color: dimgray; 
+    color: white; 
+    border: none; 
+    padding: 15px 30px; 
+    font-size: 16px; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: all 0.2s; 
+}
+
+.controls button:hover { 
+    background-color: gray; 
+    transform: scale(1.05); 
+}
+
+.controls button:disabled { 
+    opacity: 0.3; 
+    cursor: not-allowed; 
+    transform: scale(1); 
+}
+
+.page-indicator { 
+    color: gray; 
+    font-size: 18px; 
+    font-weight: bold; 
+}

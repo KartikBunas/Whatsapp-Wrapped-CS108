@@ -19,6 +19,15 @@ def input_vocab(inputvocab):
 
 vocab = input_vocab(inputvocab)
 
+#helper function to adjust times that exceed midnight(eg : 11am of one day to 1am of next)
+def hour_range(start, end):
+    if end <= start:
+        #(eg : 8 to 2 becomes 8to23 + 0to1)
+        return list(range(start, 24)) + list(range(0, end))
+    else:
+        #(eg : 9 to 21)
+        return list(range(start, end))
+
 #chat generator function
 
 def generate_chat(vocab):
@@ -33,37 +42,37 @@ def generate_chat(vocab):
             "Dhruv": {
                 "attribute": "The Chatterbox",
                 "weight": 0.40,          
-                "hours": np.arange(8, 24), 
+                "hours": hour_range(9,2), 
                 "length": 5,      
         },
             "Shashank": {
                 "attribute": "The Quiet Kid",
                 "weight": 0.04,          
-                "hours": np.arange(9, 21), 
+                "hours": hour_range(9, 3), 
                 "length": 8,      
         },
             "Aman": {
                 "attribute": "The Night Owl",
                 "weight": 0.1,          
-                "hours": np.arange(0, 5), 
+                "hours": hour_range(0, 6), 
                 "length": 7,      
         },
             "Kaushik": {
                 "attribute": "The Day Boarder",
                 "weight": 0.1,          
-                "hours": np.arange(7, 20), 
+                "hours": hour_range(7, 21), 
                 "length": 10,      
         },
             "Sathvik": {
                 "attribute": "The One Liner",
                 "weight": 0.12,          
-                "hours": np.arange(10, 24), 
+                "hours": hour_range(10, 4), 
                 "length": 2,      
         },
             "Parth": {
                 "attribute": "The Long Writer",
                 "weight": 0.1,          
-                "hours": np.arange(9, 23), 
+                "hours": np.arange(9, 1), 
                 "length": 25,      
         },
             "Gururatna": {
@@ -74,6 +83,9 @@ def generate_chat(vocab):
         }
     }
     
+    #vocab including names and @
+    newvocab = vocab + ["@"] + list(members.keys())
+
     #start and end time
     current_time = datetime.datetime(2026,4,1,12,0)
     end_time = datetime.datetime(2026,4,30,12,0)
@@ -119,7 +131,7 @@ def generate_chat(vocab):
             msg_length = np.random.poisson(lam=profile["length"])
             msg_length = max(1, msg_length)
 
-            words = np.random.choice(vocab, size=msg_length)
+            words = np.random.choice(newvocab, size=msg_length)
             message = " ".join(words)
 
             timestamp = current_time.strftime("%d/%m/%y, %H:%M")
