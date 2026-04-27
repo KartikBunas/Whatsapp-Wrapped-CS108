@@ -48,6 +48,75 @@ Used \cite{gemini} to make references file and for help in pdf compiling using m
 
 \chapter{By Vishal}
 
+\section{Libraries Used}
+
+\subsection{Chat Analyzer}
+\begin{description}
+  \item[sys] Used to read the chat.txt file path from the command line arguments.
+  \item[datetime] Used to parse timestamp strings into real datetime objects and compute time differences between messages.
+  \item[re] Used to detect and extract emojis from messages using unicode ranges \cite{pythondocs}.
+  \item[numpy] Used to compute the median response times for each person.
+  \item[json] Used to write all computed statistics into data.json.
+  \item[pathlib] Used to locate and save the data.json file relative to the script location.
+\end{description}
+
+\subsection{JavaScript}
+\begin{description}
+  \item[Chart.js] Used to render bar charts for message counts, conversation starters, response times, and night owl activity \cite{chartjs}.
+\end{description}
+
+\section{Features Implemented}
+
+\subsection{Chat Analyzer}
+The analyzer reads chat.txt line by line and parses each line into three components — a datetime object, a sender name, and a message string. It then computes the following statistics:
+
+\begin{itemize}
+    \item \textbf{Total Messages:} Count of messages sent by each person.
+    \item \textbf{Total Words:} Total number of words typed by each person.
+    \item \textbf{Night Owl:} Person who sent the most messages between 12am and 4am.
+    \item \textbf{Ghost:} Person whose messages received the fewest replies. A reply is defined as a message sent by a different person within 30 minutes.
+    \item \textbf{Conversation Starter:} Person who most frequently sent a message after a silence of more than 60 minutes.
+    \item \textbf{Most Used Emoji:} Top 3 emojis per person, detected using unicode range pattern matching.
+    \item \textbf{Busiest Day:} The single date with the highest number of messages.
+    \item \textbf{Longest Silence:} The largest time gap between two consecutive messages, reported in hours.
+    \item \textbf{Average Response Time:} Median time in minutes before someone replied to each person's messages.
+    \item \textbf{Hype Person:} Person with the fastest median reply time to others.
+    \item \textbf{Custom Stat - Max Consecutive Streak:} The longest streak of back-to-back messages sent by one person without anyone else replying. This captures the "ghoster" or "ranter" personality unique to this chat.
+\end{itemize}
+
+\subsection{JavaScript}
+The script.js file loads data.json using fetch() and populates all 9 slides dynamically \cite{mdn}. It handles slide navigation, draws all charts using Chart.js, builds the emoji grid, and implements the per-person profile selector where the user can click any member's name to view their individual statistics.
+
+\section{Custom Statistic}
+The custom statistic I chose is \textbf{Max Consecutive Streak} — the longest number of messages a single person sends in a row without anyone else replying. This metric is interesting because it captures a personality pattern unique to our simulated group chat. A high streak indicates someone who "rants" or "ghosts" the group by flooding messages without waiting for responses. A generic tool would only count total messages, but this stat reveals \textit{how} someone messages, not just \textit{how much}.
+
+\section{Definition Choices in the Parser}
+
+\begin{itemize}
+    \item \textbf{Direct Reply:} A message sent by a \textit{different} person within 30 minutes of the previous message. 30 minutes was chosen as it reflects a realistic window for active conversation.
+    \item \textbf{Long Silence:} A gap of more than 60 minutes between two consecutive messages. Below 60 minutes feels like a natural pause, above it feels like the conversation has ended.
+    \item \textbf{Busiest Day:} The day with the highest raw message count. This measures volume, not spread — a day with 100 messages in one hour counts more than a day with 80 messages spread across 12 hours.
+\end{itemize}
+
+\section{Hurdles Faced}
+
+\begin{itemize}
+    \item Parsing each line of chat.txt was tricky at first. The format had to be split twice — first by \texttt{" - "} to separate the timestamp, then by \texttt{": "} to separate the sender from the message. I had to use the \texttt{maxsplit=1} argument to avoid breaking messages that contained colons.
+    \item Computing the ghost stat required careful thinking about what counts as a reply. I had to loop through consecutive message pairs and check both the sender and the time gap simultaneously.
+    \item Detecting emojis was not straightforward. I used the \texttt{re} module with unicode ranges since standard string methods don't handle them well \cite{pythondocs}.
+    \item In JavaScript, the profile chart would crash if you viewed one profile, went back, and clicked another — because Chart.js does not allow drawing on a canvas that already has a chart. I fixed this by destroying the old chart instance before drawing a new one \cite{mdn}.
+\end{itemize}
+
+\section{What I Would Do Differently With 10 More Hours}
+
+\begin{itemize}
+    \item Add hourly breakdown data to data.json so the activity chart shows a proper 24-hour heatmap instead of a per-person bar chart.
+    \item Make the per-person profile slide show the person's top emojis visually instead of just numbers.
+    \item Add animations between slides to make the Wrapped experience feel more like Spotify's version.
+    \item Write more robust error handling in the parser for edge cases like missing timestamps or corrupted lines.
+\end{itemize}
+
+
 
 \bibliographystyle{plain}
 \bibliography{references}
