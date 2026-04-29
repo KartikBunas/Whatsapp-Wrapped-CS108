@@ -11,7 +11,7 @@ $(PDF): $(TEX) $(REF)
 	pdflatex $(TEX)
 
 clean:
-	rm -f *.aux *.log *.out *.toc *.blg *.bbl $(PDF)
+	rm -f *.aux *.log *.out *.toc *.blg *.bbl
 
 view: $(PDF)
 	explorer.exe $(PDF)
