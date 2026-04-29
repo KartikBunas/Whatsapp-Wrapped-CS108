@@ -49,12 +49,17 @@ print("Last message:", messages[-1])
  
  # total  messages - no of messages each person sent 
 total_messages = {}
+burst_count = {}
+
+
 
 for m in messages:
     sender = m["sender"]
     if sender not in total_messages:
         total_messages[sender] = 0
+        burst_count[sender] = 0
     total_messages[sender] += 1
+
 
 print("total messages", total_messages)
  
@@ -235,14 +240,25 @@ current_streak = 1
 for i in range(1, len(messages)):
     if messages[i]["sender"] == current_streak_sender:
         current_streak += 1
+        if current_streak >= 3 :
+            burst_count[current_streak_sender] += 1
     else:
         if current_streak > max_streak[current_streak_sender]:
             max_streak[current_streak_sender] = current_streak
         current_streak_sender = messages[i]["sender"]
         current_streak = 1
+    
+
+
+
+
+    
 
 print("Max consecutive streak:", max_streak)
 
+print("Burst Count:", burst_count)
+
+max_burster = max(burst_count, key=lambda x: burst_count[x])
 # writing data into json file
 
 
@@ -260,7 +276,8 @@ data = {
         "night_owl": night_owl,
         "ghost": ghost,
         "conversation_starter": conversation_starter,
-        "hype_person": hype_person
+        "hype_person": hype_person,
+        "max_burster": max_burster
     },
     "per_person": {}
 }
@@ -276,7 +293,8 @@ for name in total_messages:
         "top_emojis": top_emojis.get(name, []),
         "avg_response_time": avg_response_time.get(name, None),
         "hype_score": hype_scores.get(name, None),
-        "max_consecutive_streak": max_streak.get(name, 0)
+        "max_consecutive_streak": max_streak.get(name, 0),
+        "burst count": burst_count.get(name,0)
     }
 
 with open(output_path, 'w') as f:

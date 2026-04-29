@@ -8,7 +8,8 @@
     "night_owl": "Sathvik",
     "ghost": "Aman",
     "conversation_starter": "Kaushik",
-    "hype_person": "Gururatna"
+    "hype_person": "Gururatna",
+    "max_burster": "Dhruv"
   },
   "per_person": {
     "Kaushik": {
@@ -24,7 +25,8 @@
       ],
       "avg_response_time": 8.0,
       "hype_score": 8.0,
-      "max_consecutive_streak": 18
+      "max_consecutive_streak": 18,
+      "burst count": 212
     },
     "Dhruv": {
       "total_messages": 1119,
@@ -39,7 +41,8 @@
       ],
       "avg_response_time": 7.5,
       "hype_score": 8.0,
-      "max_consecutive_streak": 12
+      "max_consecutive_streak": 12,
+      "burst count": 319
     },
     "Gururatna": {
       "total_messages": 349,
@@ -54,7 +57,8 @@
       ],
       "avg_response_time": 7.0,
       "hype_score": 7.0,
-      "max_consecutive_streak": 4
+      "max_consecutive_streak": 4,
+      "burst count": 12
     },
     "Sathvik": {
       "total_messages": 436,
@@ -69,7 +73,8 @@
       ],
       "avg_response_time": 9.0,
       "hype_score": 7.5,
-      "max_consecutive_streak": 4
+      "max_consecutive_streak": 4,
+      "burst count": 21
     },
     "Shashank": {
       "total_messages": 131,
@@ -84,7 +89,8 @@
       ],
       "avg_response_time": 8.0,
       "hype_score": 8.0,
-      "max_consecutive_streak": 3
+      "max_consecutive_streak": 3,
+      "burst count": 3
     },
     "Aman": {
       "total_messages": 380,
@@ -99,7 +105,8 @@
       ],
       "avg_response_time": 6.0,
       "hype_score": 10.0,
-      "max_consecutive_streak": 15
+      "max_consecutive_streak": 15,
+      "burst count": 215
     }
   }
 }

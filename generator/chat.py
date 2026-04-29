@@ -19,6 +19,11 @@ def input_vocab(inputvocab):
 
 vocab = input_vocab(inputvocab)
 
+mood = np.random.choice[-1,1]
+moodvocab = []
+moodvocab.append({
+    "mood" : mood
+})
 #helper function to adjust times that exceed midnight(eg : 11am of one day to 1am of next)
 def hour_range(start, end):
     if end <= start:
@@ -27,6 +32,7 @@ def hour_range(start, end):
     else:
         #(eg : 9 to 21)
         return list(range(start, end))
+
 
 #chat generator function
 
@@ -133,6 +139,7 @@ def generate_chat(vocab):
 
             words = np.random.choice(newvocab, size=msg_length)
             message = " ".join(words)
+            mood_avg = np.mean(words)
 
             timestamp = current_time.strftime("%d/%m/%y, %H:%M")
             msg_line = f"{timestamp} - {sender}: {message}\n"

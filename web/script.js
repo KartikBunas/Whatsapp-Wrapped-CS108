@@ -49,6 +49,7 @@ fetch("../data.json")
         document.getElementById("nightowl").textContent = group.night_owl;
         document.getElementById("ghost").textContent = group.ghost;
         document.getElementById("hype").textContent = group.hype_person;
+        document.getElementById("burst").textContent = group.max_burster;
 
         // ---- SLIDE 2: busiest day ----
         document.getElementById("busiest-day-date").textContent = group.busiest_day;
